@@ -1,0 +1,7 @@
+<input-container [label]="label">
+  <input [type]="type" [placeholder]="label" [formControl]="FormControl" />
+  <input-validation
+    [control]="control"
+    [showErrorsWhen]="showErrorsWhen"> <!-- Keep using camelCase -->
+  </input-validation>
+</input-container>

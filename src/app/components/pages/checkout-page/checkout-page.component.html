@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="content">
+      <app-title title="Order Form" fontSize="1.6rem"></app-title>
+      <form [formGroup]="checkoutForm">
+        <input-text [control]="fc['name']" label="Name"></input-text>
+        <input-text [control]="fc['address']" label="Address"></input-text>
+      </form>
+      <order-list-items [order]="order"></order-list-items>
+    </div>
+    <div class="map">
+      <app-title
+      title="Choose Your Address On Map"
+      fontSize="1.6rem"></app-title>
+      <!-- Checkout Page Component Template -->
+ <map [order]="order"></map>
+
+
+  
+    </div>
+    
+    <div class="buttons-container">
+      <div class="buttons">
+        <button (click)="createOrder()">
+          Go To Payment
+        </button>
+      </div>
+  </div>
